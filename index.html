@@ -1,76 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KPS8 OSMAN BEY | PMS</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface-container-high": "#ddeaf2",
+          "surface-container": "#e3f0f8",
+          "error": "#ba1a1a",
+          "outline": "#737780",
+          "primary": "#001f3d",
+          "primary-container": "#003461",
+          "surface": "#f4faff",
+          "on-surface": "#111d23",
+          "on-primary": "#ffffff",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-low": "#e9f6fd"
+        },
+        fontFamily: { "headline":["Inter"], "body":["Inter"], "label":["Inter"] }
+      }
+    }
+  }
+</script>
 <style>
-  body { font-family: 'Inter', sans-serif; }
-  .hidden-content { display: none; }
-  .nav-item.active { background: linear-gradient(to right,#001f3d,#003461); color:white !important; border-right:4px solid #60a5fa; transform: translateX(4px);}
+body { font-family: 'Inter', sans-serif; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; display: inline-block; vertical-align: middle; }
+.sidebar-active-fill { font-variation-settings: 'FILL' 1 !important; }
+.nav-item.active { background: linear-gradient(to right, #001f3d, #003461); color: white !important; border-right: 4px solid #60a5fa; transform: translateX(4px); }
+.nav-item.active span:first-child { font-variation-settings: 'FILL' 1; }
+.hidden-content { display: none; }
+.authoritative-gradient { background: linear-gradient(135deg, #001f3d 0%, #003461 100%); }
 </style>
 </head>
-<body class="flex h-screen overflow-hidden bg-surface text-on-surface">
-<!-- Sidebar -->
-<aside class="fixed left-0 top-0 h-full w-72 bg-[#001f3d]/90 flex flex-col p-6 space-y-6">
-  <h2 class="text-white font-bold text-sm">KPS8 OSMAN BEY</h2>
-  <nav class="flex flex-col space-y-1" id="sidebar-nav">
-    <a class="nav-item active px-4 py-2 rounded cursor-pointer" data-section="dashboard">Dashboard</a>
-    <a class="nav-item px-4 py-2 rounded cursor-pointer" data-section="spark-plug">Spark Plug</a>
-    <a class="nav-item px-4 py-2 rounded cursor-pointer" data-section="pcc">PCC</a>
-    <a class="nav-item px-4 py-2 rounded cursor-pointer" data-section="valve">Valve Measurement</a>
-  </nav>
+<body class="bg-surface text-on-surface flex overflow-hidden h-screen">
+
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-72 bg-[#001f3d]/90 backdrop-blur-xl flex flex-col border-r border-blue-900/10 shadow-2xl shadow-blue-900/20 z-50">
+<!-- ... burada senin sidebar kodun aynen kalacak ... -->
+<nav class="space-y-1" id="sidebar-nav">
+<a class="nav-item active flex items-center gap-3 px-4 py-3 rounded-md text-blue-100/70 hover:text-white transition-all duration-200 cursor-pointer" data-section="dashboard">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="text-xs font-bold uppercase tracking-widest">Dashboard</span>
+</a>
+<a class="nav-item flex items-center gap-3 text-blue-100/70 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-200 cursor-pointer" data-section="spark-plug">
+<span class="material-symbols-outlined text-[20px]">settings_input_component</span>
+<span class="text-xs font-bold uppercase tracking-widest">Spark Plug</span>
+</a>
+<a class="nav-item flex items-center gap-3 text-blue-100/70 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-200 cursor-pointer" data-section="pcc">
+<span class="material-symbols-outlined text-[20px]">settings_input_composite</span>
+<span class="text-xs font-bold uppercase tracking-widest">PCC (Non Return Valve)</span>
+</a>
+<a class="nav-item flex items-center gap-3 text-blue-100/70 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-200 cursor-pointer" data-section="valve">
+<span class="material-symbols-outlined text-[20px]">straighten</span>
+<span class="text-xs font-bold uppercase tracking-widest">Valve Measurement</span>
+</a>
+</nav>
 </aside>
 
-<!-- Main Content -->
-<main class="flex-1 ml-72 overflow-y-auto p-8">
-  <!-- Dashboard -->
-  <div id="dashboard">
-    <h1 class="text-2xl font-bold text-primary mb-4">Dashboard</h1>
-    <p class="mb-2">Toplam işletim süresi: 1,324,580 saat</p>
-    <p>Planned Checks: 42</p>
-  </div>
+<!-- Content Shell -->
+<main class="flex-1 ml-72 flex flex-col h-full overflow-hidden">
+<!-- ... header ve dashboard kodun aynen kalacak ... -->
 
-  <!-- Spark Plug -->
-  <div id="spark-plug" class="hidden-content">
-    <h1 class="text-2xl font-bold text-primary mb-4">Spark Plug Maintenance</h1>
-    <p>Engine 1: E-01, E-02, E-03</p>
-  </div>
+<div class="flex-1 overflow-y-auto" id="content-container">
+<!-- Dashboard Section -->
+<div class="p-8 space-y-8" id="dashboard">
+<!-- dashboard içeriği senin verdiğin şekilde devam edecek -->
+</div>
 
-  <!-- PCC -->
-  <div id="pcc" class="hidden-content">
-    <h1 class="text-2xl font-bold text-primary mb-4">PCC (Non-Return Valve)</h1>
-    <p>Running Hours: 24,582</p>
-    <p>Active Alerts: 3</p>
-  </div>
+<!-- Spark Plug Section -->
+<div class="hidden-content p-8 space-y-10" id="spark-plug">
+<!-- spark plug içeriği ... -->
+</div>
 
-  <!-- Valve -->
-  <div id="valve" class="hidden-content">
-    <h1 class="text-2xl font-bold text-primary mb-4">Valve Measurement</h1>
-    <p>Unit U1: Inlet 0.45mm / Exhaust 0.88mm</p>
-    <p>Unit U2: Inlet 0.44mm / Exhaust 0.95mm</p>
-  </div>
+<!-- PCC Section -->
+<div class="hidden-content p-8 space-y-8" id="pcc">
+<!-- pcc içeriği ... -->
+</div>
+
+<!-- Valve Section -->
+<div class="hidden-content p-8 space-y-8" id="valve">
+<!-- valve içeriği ... -->
+</div>
+</div>
 </main>
 
-<!-- JS Section -->
+<!-- JS for sidebar switching -->
 <script>
-  const navItems = document.querySelectorAll('.nav-item');
-  const sections = document.querySelectorAll('#dashboard, #spark-plug, #pcc, #valve');
+const navItems = document.querySelectorAll('#sidebar-nav .nav-item');
+const sections = document.querySelectorAll('.hidden-content, #dashboard');
 
-  navItems.forEach(item => {
-    item.addEventListener('click', () => {
-      // Remove active class from all
-      navItems.forEach(i => i.classList.remove('active'));
-      item.classList.add('active');
-
-      const target = item.dataset.section;
-      // Hide all sections
-      sections.forEach(sec => sec.classList.add('hidden-content'));
-      // Show target
-      document.getElementById(target).classList.remove('hidden-content');
-    });
+function showSection(id) {
+  sections.forEach(sec => {
+    sec.style.display = (sec.id === id) ? 'block' : 'none';
   });
+  navItems.forEach(item => {
+    item.classList.toggle('active', item.dataset.section === id);
+  });
+}
+
+// İlk açılışta Dashboard göster
+showSection('dashboard');
+
+// Nav tıklama
+navItems.forEach(item => {
+  item.addEventListener('click', () => showSection(item.dataset.section));
+});
 </script>
+
 </body>
 </html>
