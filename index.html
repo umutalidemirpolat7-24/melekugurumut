@@ -1,525 +1,148 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html class="light" lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2299.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#ddeaf2",
+              "surface-container": "#e3f0f8",
+              "error": "#ba1a1a",
+              "outline": "#737780",
+              "tertiary-fixed": "#ffdbca",
+              "on-secondary-container": "#4e6874",
+              "secondary": "#48626e",
+              "on-tertiary-fixed": "#341100",
+              "on-secondary": "#ffffff",
+              "secondary-fixed-dim": "#afcbd8",
+              "surface-dim": "#cfdce4",
+              "on-error": "#ffffff",
+              "on-background": "#111d23",
+              "secondary-container": "#cbe7f5",
+              "on-tertiary-fixed-variant": "#723610",
+              "tertiary": "#381300",
+              "on-error-container": "#93000a",
+              "surface-container-highest": "#d7e4ec",
+              "on-tertiary": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-primary-container": "#6b9edf",
+              "inverse-surface": "#263238",
+              "surface-container-lowest": "#ffffff",
+              "surface-tint": "#27609d",
+              "on-secondary-fixed-variant": "#304a55",
+              "on-primary": "#ffffff",
+              "inverse-on-surface": "#e6f3fb",
+              "on-primary-fixed-variant": "#004882",
+              "surface": "#f4faff",
+              "tertiary-container": "#592300",
+              "surface-variant": "#d7e4ec",
+              "outline-variant": "#c3c6d1",
+              "primary-container": "#003461",
+              "surface-container-low": "#e9f6fd",
+              "tertiary-fixed-dim": "#ffb690",
+              "primary-fixed": "#d3e4ff",
+              "surface-bright": "#f4faff",
+              "on-primary-fixed": "#001c38",
+              "inverse-primary": "#a3c9ff",
+              "secondary-fixed": "#cbe7f5",
+              "primary": "#001f3d",
+              "on-secondary-fixed": "#021f29",
+              "primary-fixed-dim": "#a3c9ff",
+              "on-tertiary-container": "#d8885c",
+              "on-surface-variant": "#43474f",
+              "on-surface": "#111d23",
+              "background": "#f4faff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+</script>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .sidebar-active-fill {
+        font-variation-settings: 'FILL' 1 !important;
+    }
+    .nav-item.active {
+        background: linear-gradient(to right, #001f3d, #003461);
+        color: white !important;
+        border-right: 4px solid #60a5fa;
+        transform: translateX(4px);
+    }
+    .nav-item.active span:first-child {
+        font-variation-settings: 'FILL' 1;
+    }
+    .hidden-content {
+        display: none;
+    }
+    .authoritative-gradient { background: linear-gradient(135deg, #001f3d 0%, #003461 100%); }
+</style>
 </head>
-<body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;html class="light" lang="en"&gt;&lt;head&gt;</p>
-<p class="p1">&lt;meta charset="utf-8"/&gt;</p>
-<p class="p1">&lt;meta content="width=device-width, initial-scale=1.0" name="viewport"/&gt;</p>
-<p class="p1">&lt;script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"&gt;&lt;/script&gt;</p>
-<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;amp;display=swap" rel="stylesheet"/&gt;</p>
-<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;amp;display=swap" rel="stylesheet"/&gt;</p>
-<p class="p1">&lt;script id="tailwind-config"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>tailwind.config = {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>darkMode: "class",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>theme: {</p>
-<p class="p1"><span class="Apple-converted-space">          </span>extend: {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>colors: {</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"surface-container-high": "#ddeaf2",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"surface-container": "#e3f0f8",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"error": "#ba1a1a",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"outline": "#737780",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"tertiary-fixed": "#ffdbca",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"on-secondary-container": "#4e6874",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"secondary": "#48626e",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"on-tertiary-fixed": "#341100",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"on-secondary": "#ffffff",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"secondary-fixed-dim": "#afcbd8",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"surface-dim": "#cfdce4",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"on-error": "#ffffff",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"on-background": "#111d23",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"secondary-container": "#cbe7f5",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"on-tertiary-fixed-variant": "#723610",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"tertiary": "#381300",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"on-error-container": "#93000a",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"surface-container-highest": "#d7e4ec",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"on-tertiary": "#ffffff",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"error-container": "#ffdad6",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"on-primary-container": "#6b9edf",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"inverse-surface": "#263238",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"surface-container-lowest": "#ffffff",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"surface-tint": "#27609d",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"on-secondary-fixed-variant": "#304a55",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"on-primary": "#ffffff",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"inverse-on-surface": "#e6f3fb",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"on-primary-fixed-variant": "#004882",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"surface": "#f4faff",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"tertiary-container": "#592300",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"surface-variant": "#d7e4ec",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"outline-variant": "#c3c6d1",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"primary-container": "#003461",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"surface-container-low": "#e9f6fd",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"tertiary-fixed-dim": "#ffb690",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"primary-fixed": "#d3e4ff",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"surface-bright": "#f4faff",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"on-primary-fixed": "#001c38",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"inverse-primary": "#a3c9ff",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"secondary-fixed": "#cbe7f5",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"primary": "#001f3d",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"on-secondary-fixed": "#021f29",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"primary-fixed-dim": "#a3c9ff",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"on-tertiary-container": "#d8885c",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"on-surface-variant": "#43474f",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"on-surface": "#111d23",</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"background": "#f4faff"</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>fontFamily: {</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"headline": ["Inter"],</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"body": ["Inter"],</p>
-<p class="p1"><span class="Apple-converted-space">              </span>"label": ["Inter"]</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},</p>
-<p class="p1"><span class="Apple-converted-space">          </span>},</p>
-<p class="p1"><span class="Apple-converted-space">        </span>},</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body { font-family: 'Inter', sans-serif; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.material-symbols-outlined {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>vertical-align: middle;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.sidebar-active-fill {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-variation-settings: 'FILL' 1 !important;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.nav-item.active {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(to right, #001f3d, #003461);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: white !important;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-right: 4px solid #60a5fa;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: translateX(4px);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.nav-item.active span:first-child {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-variation-settings: 'FILL' 1;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.hidden-content {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.authoritative-gradient { background: linear-gradient(135deg, #001f3d 0%, #003461 100%); }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body class="bg-surface text-on-surface flex overflow-hidden h-screen"&gt;</p>
-<p class="p1">&lt;!-- SideNavBar --&gt;</p>
-<p class="p1">&lt;aside class="fixed left-0 top-0 h-full w-72 bg-[#001f3d]/90 dark:bg-slate-950/90 backdrop-blur-xl flex flex-col border-r border-blue-900/10 shadow-2xl shadow-blue-900/20 z-50"&gt;</p>
-<p class="p1">&lt;div class="p-6"&gt;</p>
-<p class="p1">&lt;div class="flex items-center space-x-3 mb-8"&gt;</p>
-<p class="p1">&lt;div class="w-10 h-10 bg-primary-container rounded flex items-center justify-center"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;"&gt;directions_boat&lt;/span&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div&gt;</p>
-<p class="p1">&lt;h2 class="text-white font-bold text-sm tracking-tight leading-none uppercase"&gt;KPS8 OSMAN BEY&lt;/h2&gt;</p>
-<p class="p1">&lt;p class="text-blue-100/60 text-[10px] font-bold uppercase tracking-widest mt-1"&gt;Operational&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;nav class="space-y-1" id="sidebar-nav"&gt;</p>
-<p class="p1">&lt;a class="nav-item active flex items-center gap-3 px-4 py-3 rounded-md text-blue-100/70 hover:text-white transition-all duration-200 cursor-pointer" data-section="dashboard"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-[20px]"&gt;dashboard&lt;/span&gt;</p>
-<p class="p1">&lt;span class="text-xs font-bold uppercase tracking-widest"&gt;Dashboard&lt;/span&gt;</p>
-<p class="p1">&lt;/a&gt;</p>
-<p class="p1">&lt;a class="nav-item flex items-center gap-3 text-blue-100/70 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-200 cursor-pointer" data-section="spark-plug"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-[20px]"&gt;settings_input_component&lt;/span&gt;</p>
-<p class="p1">&lt;span class="text-xs font-bold uppercase tracking-widest"&gt;Spark Plug&lt;/span&gt;</p>
-<p class="p1">&lt;/a&gt;</p>
-<p class="p1">&lt;a class="nav-item flex items-center gap-3 text-blue-100/70 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-200 cursor-pointer" data-section="pcc"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-[20px]"&gt;settings_input_composite&lt;/span&gt;</p>
-<p class="p1">&lt;span class="text-xs font-bold uppercase tracking-widest"&gt;PCC (Non Return Valve)&lt;/span&gt;</p>
-<p class="p1">&lt;/a&gt;</p>
-<p class="p1">&lt;a class="nav-item flex items-center gap-3 text-blue-100/70 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-200 cursor-pointer" data-section="valve"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-[20px]"&gt;straighten&lt;/span&gt;</p>
-<p class="p1">&lt;span class="text-xs font-bold uppercase tracking-widest"&gt;Valve Measurement&lt;/span&gt;</p>
-<p class="p1">&lt;/a&gt;</p>
-<p class="p1">&lt;a class="nav-item flex items-center gap-3 text-blue-100/70 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-200 cursor-pointer" data-section="starting-air"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-[20px]"&gt;air&lt;/span&gt;</p>
-<p class="p1">&lt;span class="text-xs font-bold uppercase tracking-widest"&gt;Starting Air Compressors&lt;/span&gt;</p>
-<p class="p1">&lt;/a&gt;</p>
-<p class="p1">&lt;a class="nav-item flex items-center gap-3 text-blue-100/70 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-200 cursor-pointer" data-section="denox"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-[20px]"&gt;compress&lt;/span&gt;</p>
-<p class="p1">&lt;span class="text-xs font-bold uppercase tracking-widest"&gt;Denox Compressors&lt;/span&gt;</p>
-<p class="p1">&lt;/a&gt;</p>
-<p class="p1">&lt;a class="nav-item flex items-center gap-3 text-blue-100/70 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-200 cursor-pointer" data-section="control-air"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-[20px]"&gt;mode_fan&lt;/span&gt;</p>
-<p class="p1">&lt;span class="text-xs font-bold uppercase tracking-widest"&gt;Control Air Compressors&lt;/span&gt;</p>
-<p class="p1">&lt;/a&gt;</p>
-<p class="p1">&lt;a class="nav-item flex items-center gap-3 text-blue-100/70 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-200 cursor-pointer" data-section="fwg"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-[20px]"&gt;water_drop&lt;/span&gt;</p>
-<p class="p1">&lt;span class="text-xs font-bold uppercase tracking-widest"&gt;FWG&lt;/span&gt;</p>
-<p class="p1">&lt;/a&gt;</p>
-<p class="p1">&lt;a class="nav-item flex items-center gap-3 text-blue-100/70 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-200 cursor-pointer" data-section="pumps"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-[20px]"&gt;ev_station&lt;/span&gt;</p>
-<p class="p1">&lt;span class="text-xs font-bold uppercase tracking-widest"&gt;Pumps&lt;/span&gt;</p>
-<p class="p1">&lt;/a&gt;</p>
-<p class="p1">&lt;a class="nav-item flex items-center gap-3 text-blue-100/70 hover:text-white px-4 py-3 hover:bg-white/5 transition-all duration-200 cursor-pointer" data-section="lube-oil"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-[20px]"&gt;oil_barrel&lt;/span&gt;</p>
-<p class="p1">&lt;span class="text-xs font-bold uppercase tracking-widest"&gt;Lube Oil System&lt;/span&gt;</p>
-<p class="p1">&lt;/a&gt;</p>
-<p class="p1">&lt;/nav&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="mt-auto p-6 space-y-4"&gt;</p>
-<p class="p1">&lt;button class="w-full py-3 bg-blue-500 hover:bg-blue-400 text-[#001f3d] font-bold text-[10px] uppercase tracking-widest rounded transition-colors flex items-center justify-center gap-2"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-sm"&gt;add&lt;/span&gt; Add Maintenance Log</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</p>
-<p class="p1">&lt;div class="flex flex-col gap-2 pt-4 border-t border-blue-900/20"&gt;</p>
-<p class="p1">&lt;a class="flex items-center gap-3 text-blue-100/50 hover:text-white transition-colors cursor-pointer"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-[18px]"&gt;monitor_heart&lt;/span&gt;</p>
-<p class="p1">&lt;span class="text-[10px] font-bold uppercase tracking-widest"&gt;System Health&lt;/span&gt;</p>
-<p class="p1">&lt;/a&gt;</p>
-<p class="p1">&lt;a class="flex items-center gap-3 text-blue-100/50 hover:text-white transition-colors cursor-pointer"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-[18px]"&gt;help&lt;/span&gt;</p>
-<p class="p1">&lt;span class="text-[10px] font-bold uppercase tracking-widest"&gt;Support&lt;/span&gt;</p>
-<p class="p1">&lt;/a&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/aside&gt;</p>
-<p class="p1">&lt;!-- Content Shell --&gt;</p>
-<p class="p1">&lt;main class="flex-1 ml-72 flex flex-col h-full overflow-hidden"&gt;</p>
-<p class="p1">&lt;!-- TopNavBar --&gt;</p>
-<p class="p1">&lt;header class="bg-[#f4faff] flex justify-between items-center w-full px-8 py-3 h-16 border-b-0 sticky top-0 z-40"&gt;</p>
-<p class="p1">&lt;div class="flex items-center gap-8"&gt;</p>
-<p class="p1">&lt;h1 class="text-xl font-black text-[#001f3d] tracking-tighter uppercase"&gt;KPS8 OSMAN BEY | PMS&lt;/h1&gt;</p>
-<p class="p1">&lt;nav class="hidden md:flex items-center gap-6"&gt;</p>
-<p class="p1">&lt;a class="text-[#001f3d] font-bold border-b-2 border-[#001f3d] pb-1 text-sm Inter tracking-tight" href="#"&gt;Fleet Dashboard&lt;/a&gt;</p>
-<p class="p1">&lt;a class="text-slate-500 hover:bg-[#e3f0f8] transition-colors px-2 py-1 rounded text-sm Inter tracking-tight" href="#"&gt;Vessel Status&lt;/a&gt;</p>
-<p class="p1">&lt;a class="text-slate-500 hover:bg-[#e3f0f8] transition-colors px-2 py-1 rounded text-sm Inter tracking-tight" href="#"&gt;Crew Info&lt;/a&gt;</p>
-<p class="p1">&lt;/nav&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="flex items-center gap-4"&gt;</p>
-<p class="p1">&lt;div class="flex items-center gap-1"&gt;</p>
-<p class="p1">&lt;button class="p-2 text-slate-500 hover:bg-[#e3f0f8] rounded-full transition-colors"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined"&gt;notifications&lt;/span&gt;</p>
-<p class="p1">&lt;/button&gt;</p>
-<p class="p1">&lt;button class="p-2 text-slate-500 hover:bg-[#e3f0f8] rounded-full transition-colors"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined"&gt;settings&lt;/span&gt;</p>
-<p class="p1">&lt;/button&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="h-8 w-[1px] bg-outline-variant/30 mx-2"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;button class="px-4 py-2 text-xs font-bold uppercase tracking-widest text-on-primary-fixed-variant hover:bg-[#e3f0f8] transition-colors"&gt;Export Log&lt;/button&gt;</p>
-<p class="p1">&lt;div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center"&gt;</p>
-<p class="p1">&lt;img alt="Chief Engineer" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYnt7f4nYP0Aq6N0YkLLJnzRN2Ppub9kEEq2Ht53lvJjQhzn3_aGss49ODsD50gNn1mJ7BBnjuX1nPN-Wy8haj8zSewa0C_cxKvewbBuqUsjnnp_M1GqpomZQwtOoZnlifrt5guwz3rWjKJt-92Sz0VNDMJms-QYNcwIB9Wh72DLrU_yPt7PC7i36DwGHpVDlKcnuNoBFUnTsfOS-Gw0L6k-HSbP7bOEk532vLCwUIfLgdlpArlqHIHezRDvn5y9y4G2mXoD6h2zU"/&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/header&gt;</p>
-<p class="p1">&lt;!-- Content Sections --&gt;</p>
-<p class="p1">&lt;div class="flex-1 overflow-y-auto" id="content-container"&gt;</p>
-<p class="p1">&lt;!-- Dashboard Section --&gt;</p>
-<p class="p1">&lt;div class="p-8 space-y-8" id="dashboard"&gt;</p>
-<p class="p1">&lt;section class="grid grid-cols-1 md:grid-cols-3 gap-6"&gt;</p>
-<p class="p1">&lt;div class="bg-surface-container-lowest p-6 rounded-lg border-b-2 border-surface-container-high"&gt;</p>
-<p class="p1">&lt;div class="flex justify-between items-start mb-4"&gt;</p>
-<p class="p1">&lt;span class="text-[10px] font-bold uppercase tracking-widest text-outline"&gt;Total Operating Time&lt;/span&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-primary/40"&gt;timer&lt;/span&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;h3 class="text-4xl font-extrabold text-primary tracking-tight"&gt;1,324,580&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="text-xs font-bold text-primary-container uppercase mt-1"&gt;Fleet Hours Accumulated&lt;/p&gt;</p>
-<p class="p1">&lt;div class="mt-6 w-full bg-surface-container h-1 rounded-full overflow-hidden"&gt;&lt;div class="bg-primary h-full w-3/4"&gt;&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="bg-surface-container-lowest p-6 rounded-lg border-b-2 border-error/20"&gt;</p>
-<p class="p1">&lt;div class="flex justify-between items-start mb-4"&gt;</p>
-<p class="p1">&lt;span class="text-[10px] font-bold uppercase tracking-widest text-error"&gt;Critical Alerts&lt;/span&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-error"&gt;warning&lt;/span&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;h3 class="text-4xl font-extrabold text-error tracking-tight"&gt;24&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="text-xs font-bold text-error uppercase mt-1"&gt;Overdue Tasks Detected&lt;/p&gt;</p>
-<p class="p1">&lt;div class="mt-6 flex items-center gap-2"&gt;</p>
-<p class="p1">&lt;span class="px-2 py-0.5 bg-error text-white text-[10px] font-bold rounded-full"&gt;HIGH PRIORITY&lt;/span&gt;</p>
-<p class="p1">&lt;span class="text-[10px] text-outline font-medium"&gt;Requires immediate action&lt;/span&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="bg-surface-container-lowest p-6 rounded-lg border-b-2 border-surface-container-high"&gt;</p>
-<p class="p1">&lt;div class="flex justify-between items-start mb-4"&gt;</p>
-<p class="p1">&lt;span class="text-[10px] font-bold uppercase tracking-widest text-outline"&gt;Planned Schedule&lt;/span&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-surface-tint"&gt;event_upcoming&lt;/span&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;h3 class="text-4xl font-extrabold text-primary tracking-tight"&gt;42&lt;/h3&gt;</p>
-<p class="p1">&lt;p class="text-xs font-bold text-primary-container uppercase mt-1"&gt;Upcoming Checks (72h)&lt;/p&gt;</p>
-<p class="p1">&lt;div class="mt-6 flex gap-1"&gt;</p>
-<p class="p1">&lt;div class="h-1 flex-1 bg-surface-tint rounded-full"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="h-1 flex-1 bg-surface-tint rounded-full"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="h-1 flex-1 bg-surface-container rounded-full"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="h-1 flex-1 bg-surface-container rounded-full"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p1">&lt;section class="bg-surface-container-low rounded-xl overflow-hidden"&gt;</p>
-<p class="p1">&lt;div class="p-6 flex justify-between items-center border-b border-outline-variant/10"&gt;</p>
-<p class="p1">&lt;div&gt;</p>
-<p class="p1">&lt;h2 class="text-lg font-bold text-primary"&gt;Active Maintenance Backlog&lt;/h2&gt;</p>
-<p class="p1">&lt;p class="text-xs text-secondary font-medium mt-1"&gt;Showing all pending items for Engine Room Section A-4&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="flex gap-2"&gt;</p>
-<p class="p1">&lt;button class="px-3 py-1.5 bg-surface-container-lowest text-[10px] font-bold uppercase tracking-widest text-primary border border-outline-variant/30 rounded flex items-center gap-2"&gt;&lt;span class="material-symbols-outlined text-sm"&gt;filter_list&lt;/span&gt; Filter&lt;/button&gt;</p>
-<p class="p1">&lt;button class="px-3 py-1.5 bg-primary text-white text-[10px] font-bold uppercase tracking-widest rounded flex items-center gap-2 shadow-lg shadow-primary/20"&gt;&lt;span class="material-symbols-outlined text-sm"&gt;download&lt;/span&gt; Report&lt;/button&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="overflow-x-auto"&gt;</p>
-<p class="p1">&lt;table class="w-full text-left border-collapse"&gt;</p>
-<p class="p1">&lt;thead class="bg-surface-container text-primary"&gt;</p>
-<p class="p1">&lt;tr&gt;</p>
-<p class="p1">&lt;th class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest"&gt;Component ID&lt;/th&gt;</p>
-<p class="p1">&lt;th class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest"&gt;Description&lt;/th&gt;</p>
-<p class="p1">&lt;th class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest"&gt;Last Check&lt;/th&gt;</p>
-<p class="p1">&lt;th class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest"&gt;Next Due&lt;/th&gt;</p>
-<p class="p1">&lt;th class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest"&gt;Status&lt;/th&gt;</p>
-<p class="p1">&lt;th class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest"&gt;Action&lt;/th&gt;</p>
-<p class="p1">&lt;/tr&gt;</p>
-<p class="p1">&lt;/thead&gt;</p>
-<p class="p1">&lt;tbody class="divide-y divide-outline-variant/5 bg-white"&gt;</p>
-<p class="p1">&lt;tr&gt;</p>
-<p class="p1">&lt;td class="px-6 py-4"&gt;&lt;span class="text-xs font-bold text-primary font-mono tracking-tight"&gt;ENG-P-402&lt;/span&gt;&lt;/td&gt;</p>
-<p class="p1">&lt;td class="px-6 py-4"&gt;&lt;div class="flex flex-col"&gt;&lt;span class="text-sm font-bold text-primary"&gt;Main Fuel Injection Pump&lt;/span&gt;&lt;span class="text-[10px] text-outline uppercase font-medium"&gt;Lubrication &amp;amp; Seal Check&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;</p>
-<p class="p1">&lt;td class="px-6 py-4"&gt;&lt;span class="text-xs text-secondary font-medium"&gt;2023-10-12&lt;/span&gt;&lt;/td&gt;</p>
-<p class="p1">&lt;td class="px-6 py-4"&gt;&lt;span class="text-xs font-bold text-error"&gt;2023-11-20&lt;/span&gt;&lt;/td&gt;</p>
-<p class="p1">&lt;td class="px-6 py-4"&gt;&lt;span class="px-3 py-1 bg-error text-white text-[10px] font-bold rounded-full uppercase"&gt;Overdue&lt;/span&gt;&lt;/td&gt;</p>
-<p class="p1">&lt;td class="px-6 py-4"&gt;&lt;button class="text-primary-container hover:text-primary transition-colors"&gt;&lt;span class="material-symbols-outlined"&gt;open_in_new&lt;/span&gt;&lt;/button&gt;&lt;/td&gt;</p>
-<p class="p1">&lt;/tr&gt;</p>
-<p class="p1">&lt;tr class="bg-slate-50/30"&gt;</p>
-<p class="p1">&lt;td class="px-6 py-4"&gt;&lt;span class="text-xs font-bold text-primary font-mono tracking-tight"&gt;CMP-A-012&lt;/span&gt;&lt;/td&gt;</p>
-<p class="p1">&lt;td class="px-6 py-4"&gt;&lt;div class="flex flex-col"&gt;&lt;span class="text-sm font-bold text-primary"&gt;Air Compressor Unit 2&lt;/span&gt;&lt;span class="text-[10px] text-outline uppercase font-medium"&gt;Filter Replacement&lt;/span&gt;&lt;/div&gt;&lt;/td&gt;</p>
-<p class="p1">&lt;td class="px-6 py-4"&gt;&lt;span class="text-xs text-secondary font-medium"&gt;2023-11-05&lt;/span&gt;&lt;/td&gt;</p>
-<p class="p1">&lt;td class="px-6 py-4"&gt;&lt;span class="text-xs font-bold text-primary"&gt;2023-12-15&lt;/span&gt;&lt;/td&gt;</p>
-<p class="p1">&lt;td class="px-6 py-4"&gt;&lt;span class="px-3 py-1 bg-[#F1C40F] text-black text-[10px] font-bold rounded-full uppercase"&gt;Upcoming&lt;/span&gt;&lt;/td&gt;</p>
-<p class="p1">&lt;td class="px-6 py-4"&gt;&lt;button class="text-primary-container hover:text-primary transition-colors"&gt;&lt;span class="material-symbols-outlined"&gt;open_in_new&lt;/span&gt;&lt;/button&gt;&lt;/td&gt;</p>
-<p class="p1">&lt;/tr&gt;</p>
-<p class="p1">&lt;/tbody&gt;</p>
-<p class="p1">&lt;/table&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p1">&lt;section class="grid grid-cols-1 lg:grid-cols-2 gap-8"&gt;</p>
-<p class="p1">&lt;div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/10"&gt;</p>
-<p class="p1">&lt;h3 class="text-sm font-black text-primary uppercase tracking-tight mb-6"&gt;Karmole Gas Specifications&lt;/h3&gt;</p>
-<p class="p1">&lt;div class="grid grid-cols-2 gap-4"&gt;</p>
-<p class="p1">&lt;div class="bg-surface-container-lowest p-4 border border-outline-variant/10 rounded-lg"&gt;</p>
-<p class="p1">&lt;div class="flex items-center gap-2 mb-2"&gt;&lt;span class="material-symbols-outlined text-primary text-lg"&gt;compress&lt;/span&gt;&lt;span class="text-[10px] font-bold text-outline uppercase tracking-wider"&gt;Supply Pressure&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="flex items-baseline gap-1"&gt;&lt;span class="text-2xl font-black text-primary"&gt;6.8&lt;/span&gt;&lt;span class="text-xs font-bold text-secondary"&gt;bar&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="bg-surface-container-lowest p-4 border border-outline-variant/10 rounded-lg"&gt;</p>
-<p class="p1">&lt;div class="flex items-center gap-2 mb-2"&gt;&lt;span class="material-symbols-outlined text-primary text-lg"&gt;thermostat&lt;/span&gt;&lt;span class="text-[10px] font-bold text-outline uppercase tracking-wider"&gt;Temperature&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="flex items-baseline gap-1"&gt;&lt;span class="text-2xl font-black text-primary"&gt;42.5&lt;/span&gt;&lt;span class="text-xs font-bold text-secondary"&gt;°C&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10"&gt;</p>
-<p class="p1">&lt;h3 class="text-sm font-black text-primary uppercase tracking-tight mb-6"&gt;Recent Deck Logs&lt;/h3&gt;</p>
-<p class="p1">&lt;div class="space-y-4"&gt;</p>
-<p class="p1">&lt;div class="flex gap-4 items-start"&gt;&lt;div class="w-2 h-2 mt-1.5 rounded-full bg-primary flex-shrink-0"&gt;&lt;/div&gt;&lt;div&gt;&lt;p class="text-xs font-bold text-primary leading-tight"&gt;Valve Clearance Adjusted - Cylinder 4&lt;/p&gt;&lt;p class="text-[10px] text-outline mt-0.5 font-medium"&gt;Recorded by 2nd Engineer • 2 hours ago&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="flex gap-4 items-start"&gt;&lt;div class="w-2 h-2 mt-1.5 rounded-full bg-error flex-shrink-0"&gt;&lt;/div&gt;&lt;div&gt;&lt;p class="text-xs font-bold text-primary leading-tight"&gt;High Temp Alarm - FWG Heat Exchanger&lt;/p&gt;&lt;p class="text-[10px] text-outline mt-0.5 font-medium"&gt;Automated System Log • 4 hours ago&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;!-- Spark Plug Section (Based on SCREEN_13) --&gt;</p>
-<p class="p1">&lt;div class="hidden-content p-8 space-y-10" id="spark-plug"&gt;</p>
-<p class="p1">&lt;div class="flex flex-col md:flex-row justify-between items-end gap-6"&gt;</p>
-<p class="p1">&lt;div&gt;</p>
-<p class="p1">&lt;nav class="flex text-xs font-bold tracking-widest text-on-surface-variant uppercase mb-2"&gt;</p>
-<p class="p1">&lt;span class="opacity-50"&gt;Engines&lt;/span&gt;&lt;span class="mx-2 opacity-50"&gt;/&lt;/span&gt;&lt;span class="text-primary"&gt;Engine 1 (MAN 51/60 GTS)&lt;/span&gt;</p>
-<p class="p1">&lt;/nav&gt;</p>
-<p class="p1">&lt;h1 class="text-4xl font-black text-primary tracking-tight"&gt;Spark Plug Maintenance&lt;/h1&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="flex gap-1 overflow-x-auto no-scrollbar max-w-[500px] bg-surface-container p-1 rounded-lg"&gt;</p>
-<p class="p1">&lt;button class="px-4 py-2 bg-primary text-white text-xs font-bold rounded shadow-sm"&gt;E-01&lt;/button&gt;</p>
-<p class="p1">&lt;button class="px-4 py-2 hover:bg-white text-xs font-bold rounded transition-colors"&gt;E-02&lt;/button&gt;</p>
-<p class="p1">&lt;button class="px-4 py-2 hover:bg-white text-xs font-bold rounded transition-colors"&gt;E-03&lt;/button&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="grid grid-cols-1 md:grid-cols-4 gap-6"&gt;</p>
-<p class="p1">&lt;div class="bg-white p-6 rounded shadow-sm border-l-4 border-primary"&gt;</p>
-<p class="p1">&lt;span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant"&gt;Global Engine Hours&lt;/span&gt;</p>
-<p class="p1">&lt;div class="text-3xl font-black text-primary mt-1"&gt;12,450 &lt;span class="text-sm font-medium"&gt;HRS&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="bg-white p-6 rounded shadow-sm border-l-4 border-error"&gt;</p>
-<p class="p1">&lt;span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant"&gt;Due for Service&lt;/span&gt;</p>
-<p class="p1">&lt;div class="text-3xl font-black text-error mt-1"&gt;04 &lt;span class="text-sm font-medium"&gt;CYL&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="grid grid-cols-1 xl:grid-cols-3 gap-10"&gt;</p>
-<p class="p1">&lt;div class="xl:col-span-2 space-y-10"&gt;</p>
-<p class="p1">&lt;section&gt;</p>
-<p class="p1">&lt;div class="flex items-center justify-between mb-6 border-b border-outline-variant/30 pb-2"&gt;</p>
-<p class="p1">&lt;h2 class="text-xl font-extrabold text-primary flex items-center gap-2"&gt;&lt;span class="w-8 h-8 authoritative-gradient text-white rounded flex items-center justify-center text-sm"&gt;A&lt;/span&gt; A-BANK CYLINDERS&lt;/h2&gt;</p>
-<p class="p1">&lt;span class="text-xs font-bold text-on-surface-variant uppercase tracking-widest"&gt;9 Active Units&lt;/span&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"&gt;</p>
-<p class="p1">&lt;div class="bg-white p-5 rounded-xl border-2 border-primary shadow-lg relative"&gt;</p>
-<p class="p1">&lt;div class="absolute top-0 right-0 p-2"&gt;&lt;span class="bg-[#27AE60] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase"&gt;Healthy&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="flex items-center gap-4 mb-4"&gt;&lt;div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg"&gt;&lt;span class="text-xl font-black text-primary"&gt;A1&lt;/span&gt;&lt;/div&gt;&lt;div class="text-xl font-black text-[#27AE60]"&gt;7,550 HRS&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="space-y-3 text-sm"&gt;</p>
-<p class="p1">&lt;div class="flex justify-between border-b pb-2"&gt;&lt;span&gt;Last Replace&lt;/span&gt;&lt;span class="font-bold"&gt;4,900 HRS&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="flex justify-between"&gt;&lt;span&gt;Current Running&lt;/span&gt;&lt;span class="font-bold text-primary"&gt;12,450 HRS&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="space-y-6"&gt;</p>
-<p class="p1">&lt;div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-outline-variant/10"&gt;</p>
-<p class="p1">&lt;div class="authoritative-gradient p-6 text-white"&gt;</p>
-<p class="p1">&lt;h3 class="text-lg font-bold uppercase tracking-widest"&gt;Detailed Log: A1&lt;/h3&gt;</p>
-<p class="p1">&lt;div class="grid grid-cols-2 gap-4 mt-4"&gt;</p>
-<p class="p1">&lt;div&gt;&lt;div class="text-[10px] opacity-60 font-bold uppercase"&gt;Serial No.&lt;/div&gt;&lt;div class="font-mono text-sm"&gt;SPK-992-001-A1&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div&gt;&lt;div class="text-[10px] opacity-60 font-bold uppercase"&gt;Date&lt;/div&gt;&lt;div class="font-mono text-sm"&gt;22 MAY 2023&lt;/div&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="p-6"&gt;</p>
-<p class="p1">&lt;img alt="Spark Plug" class="w-full h-48 object-cover rounded-xl mb-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrk7y0B1LvJSTuiQBJ6s4Hks9y9z38KIbC4tyHIa3h8Q4_vbu8M7Pwfo9eGXuJE5h5lWd8eJMsaFXMJkl7TcM1B-8ApRZBu8GwerUULmI6Y1tGpFipSTRGoHl4V_gOxwT4mv7qFoKWKPFv2I1F1Tp0GGLuOgNJj7MgSyJTFzjIRj-8vfisKgaxA9djl-NjukcIMablUOGnCU0aMfxPlVn5NZkD8JeNpL4PS9rAQbRRhJgKQq8dJJONQi7hNiBjBA_4hH15H78Bp4k"/&gt;</p>
-<p class="p1">&lt;h4 class="text-xs font-black text-primary uppercase tracking-widest mb-4"&gt;Timeline&lt;/h4&gt;</p>
-<p class="p1">&lt;div class="space-y-4 text-xs"&gt;</p>
-<p class="p1">&lt;div class="border-l-2 pl-4 pb-2"&gt;&lt;strong&gt;Interim Inspection&lt;/strong&gt;&lt;p class="mt-1"&gt;Electrodes cleaned, gap adjusted to 0.45mm.&lt;/p&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;!-- PCC Section (Based on SCREEN_14) --&gt;</p>
-<p class="p1">&lt;div class="hidden-content p-8 space-y-8" id="pcc"&gt;</p>
-<p class="p1">&lt;h2 class="text-3xl font-extrabold text-primary tracking-tight"&gt;PCC (Non-Return Valve) Maintenance&lt;/h2&gt;</p>
-<p class="p1">&lt;div class="grid grid-cols-4 gap-6"&gt;</p>
-<p class="p1">&lt;div class="bg-white p-6 rounded-xl border-b-2 border-primary shadow-sm"&gt;</p>
-<p class="p1">&lt;span class="text-xs uppercase tracking-widest text-slate-500"&gt;Running Hours&lt;/span&gt;</p>
-<p class="p1">&lt;div class="text-4xl font-black text-primary mt-1"&gt;24,582 &lt;span class="text-sm font-bold opacity-40"&gt;HRS&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="bg-white p-6 rounded-xl shadow-sm"&gt;</p>
-<p class="p1">&lt;span class="text-xs uppercase tracking-widest text-slate-500"&gt;Active Alerts&lt;/span&gt;</p>
-<p class="p1">&lt;div class="text-4xl font-black text-error mt-1"&gt;03 &lt;span class="material-symbols-outlined mb-1 ml-2"&gt;warning&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;section class="space-y-4"&gt;</p>
-<p class="p1">&lt;div class="flex justify-between items-center bg-surface-container-low px-6 py-3 rounded-lg"&gt;</p>
-<p class="p1">&lt;div class="flex items-center gap-3"&gt;&lt;span class="w-8 h-8 rounded-full authoritative-gradient text-white flex items-center justify-center font-bold"&gt;A&lt;/span&gt;&lt;h3 class="text-lg font-extrabold text-primary uppercase"&gt;A-Bank (Cylinders 1-9)&lt;/h3&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="grid grid-cols-5 gap-4"&gt;</p>
-<p class="p1">&lt;div class="bg-white p-5 rounded-xl shadow-sm border-t-4 border-green-500"&gt;</p>
-<p class="p1">&lt;div class="flex justify-between mb-4"&gt;&lt;span class="text-2xl font-black text-primary"&gt;CYL 01&lt;/span&gt;&lt;span class="px-3 py-1 bg-green-500 text-white text-[10px] font-black rounded-full"&gt;OK&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="text-[10px] text-slate-500 uppercase"&gt;Last Maintenance&lt;/div&gt;</p>
-<p class="p1">&lt;div class="text-sm font-bold"&gt;12,582 hrs&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;!-- Valve Section (Based on SCREEN_40) --&gt;</p>
-<p class="p1">&lt;div class="hidden-content p-8 space-y-8" id="valve"&gt;</p>
-<p class="p1">&lt;h2 class="text-4xl font-extrabold text-primary tracking-tighter"&gt;Valve Measurement System&lt;/h2&gt;</p>
-<p class="p1">&lt;div class="grid grid-cols-2 gap-8"&gt;</p>
-<p class="p1">&lt;div class="bg-white rounded-2xl shadow-sm border overflow-hidden"&gt;</p>
-<p class="p1">&lt;div class="p-6 bg-surface-container-low flex justify-between items-center"&gt;</p>
-<p class="p1">&lt;h3 class="text-xl font-bold text-primary"&gt;ME-01 (Main Engine)&lt;/h3&gt;</p>
-<p class="p1">&lt;span class="px-3 py-1 bg-error text-white text-[10px] font-black rounded-full uppercase"&gt;Due&lt;/span&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="p-6"&gt;</p>
-<p class="p1">&lt;table class="w-full text-sm"&gt;</p>
-<p class="p1">&lt;thead class="text-[10px] uppercase text-slate-400 font-black border-b"&gt;&lt;tr class="text-left"&gt;&lt;th class="pb-2"&gt;Unit&lt;/th&gt;&lt;th class="pb-2 text-center"&gt;Inlet (mm)&lt;/th&gt;&lt;th class="pb-2 text-center"&gt;Exhaust (mm)&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;</p>
-<p class="p1">&lt;tbody class="divide-y"&gt;</p>
-<p class="p1">&lt;tr&gt;&lt;td class="py-3 font-bold"&gt;U1&lt;/td&gt;&lt;td class="text-center"&gt;0.45 / 0.46&lt;/td&gt;&lt;td class="text-center"&gt;0.88 / 0.90&lt;/td&gt;&lt;/tr&gt;</p>
-<p class="p1">&lt;tr&gt;&lt;td class="py-3 font-bold text-error"&gt;U2&lt;/td&gt;&lt;td class="text-center"&gt;0.44 / 0.44&lt;/td&gt;&lt;td class="text-center font-bold text-error"&gt;0.95 / 0.96&lt;/td&gt;&lt;/tr&gt;</p>
-<p class="p1">&lt;/tbody&gt;</p>
-<p class="p1">&lt;/table&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;!-- Starting Air Section (Based on SCREEN_23) --&gt;</p>
-<p class="p1">&lt;div class="hidden-content p-8 space-y-10" id="starting-air"&gt;</p>
-<p class="p1">&lt;h1 class="text-4xl font-black text-primary tracking-tight"&gt;Engine Deck Level 2&lt;/h1&gt;</p>
-<p class="p1">&lt;div class="grid grid-cols-2 gap-8"&gt;</p>
-<p class="p1">&lt;div class="bg-white rounded-xl p-8 shadow-sm border border-slate-100 relative"&gt;</p>
-<p class="p1">&lt;div class="absolute top-0 left-0 w-2 h-full bg-error rounded-l-xl"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;h4 class="text-2xl font-black text-primary mb-6"&gt;Starting Air Compressor 1&lt;/h4&gt;</p>
-<p class="p1">&lt;div class="bg-slate-50 p-6 rounded-lg mb-6"&gt;</p>
-<p class="p1">&lt;span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest"&gt;Running Hours&lt;/span&gt;</p>
-<p class="p1">&lt;div class="text-3xl font-black text-primary mt-1"&gt;12,450 &lt;span class="text-xs"&gt;HRS&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="space-y-4"&gt;</p>
-<p class="p1">&lt;div class="flex justify-between border-b pb-2"&gt;&lt;span&gt;Filter Replacement&lt;/span&gt;&lt;span class="text-error font-bold uppercase text-xs"&gt;Overdue&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="flex justify-between"&gt;&lt;span&gt;Lube Oil Change&lt;/span&gt;&lt;span class="text-green-500 font-bold uppercase text-xs"&gt;Healthy&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;!-- Lube Oil Section (Based on SCREEN_26) --&gt;</p>
-<p class="p1">&lt;div class="hidden-content p-8 space-y-8" id="lube-oil"&gt;</p>
-<p class="p1">&lt;h2 class="text-3xl font-black text-primary tracking-tighter"&gt;Lube Oil Analytics&lt;/h2&gt;</p>
-<p class="p1">&lt;div class="grid grid-cols-3 gap-6"&gt;</p>
-<p class="p1">&lt;div class="bg-white rounded-2xl overflow-hidden shadow-sm border p-6"&gt;</p>
-<p class="p1">&lt;div class="flex justify-between items-center mb-6"&gt;</p>
-<p class="p1">&lt;h3 class="text-sm font-black text-primary"&gt;ME-101&lt;/h3&gt;</p>
-<p class="p1">&lt;span class="px-3 py-1 bg-green-500 text-white text-[9px] font-black rounded-full uppercase"&gt;Normal&lt;/span&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="space-y-4"&gt;</p>
-<p class="p1">&lt;div class="flex justify-between text-[10px] font-bold text-slate-400"&gt;&lt;span&gt;TBN TREND&lt;/span&gt;&lt;span&gt;12.4 mg KOH/g&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;div class="h-20 bg-slate-50 rounded-xl flex items-end gap-1 p-2"&gt;</p>
-<p class="p1">&lt;div class="flex-1 bg-sky-200 h-1/2"&gt;&lt;/div&gt;&lt;div class="flex-1 bg-sky-300 h-3/4"&gt;&lt;/div&gt;&lt;div class="flex-1 bg-sky-500 h-full"&gt;&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;!-- Under Construction Placeholders --&gt;</p>
-<p class="p1">&lt;div class="hidden-content flex flex-col items-center justify-center h-full text-center p-20" id="denox"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-8xl text-primary/10 mb-6"&gt;engineering&lt;/span&gt;</p>
-<p class="p1">&lt;h2 class="text-3xl font-black text-primary"&gt;Denox Compressors&lt;/h2&gt;</p>
-<p class="p1">&lt;p class="text-slate-400 max-w-md mt-4 font-medium"&gt;This section is currently under maintenance. Real-time telemetry data integration is in progress.&lt;/p&gt;</p>
-<p class="p1">&lt;button class="mt-8 px-8 py-3 bg-primary text-white font-bold text-xs uppercase tracking-widest rounded shadow-lg"&gt;Return to Dashboard&lt;/button&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="hidden-content flex flex-col items-center justify-center h-full text-center p-20" id="control-air"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-8xl text-primary/10 mb-6"&gt;mode_fan&lt;/span&gt;</p>
-<p class="p1">&lt;h2 class="text-3xl font-black text-primary"&gt;Control Air Compressors&lt;/h2&gt;</p>
-<p class="p1">&lt;p class="text-slate-400 max-w-md mt-4 font-medium"&gt;Control system interface pending certification for this vessel series.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="hidden-content flex flex-col items-center justify-center h-full text-center p-20" id="fwg"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-8xl text-primary/10 mb-6"&gt;water_drop&lt;/span&gt;</p>
-<p class="p1">&lt;h2 class="text-3xl font-black text-primary"&gt;Fresh Water Generator (FWG)&lt;/h2&gt;</p>
-<p class="p1">&lt;p class="text-slate-400 max-w-md mt-4 font-medium"&gt;Sensor calibration required before system activation.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;div class="hidden-content flex flex-col items-center justify-center h-full text-center p-20" id="pumps"&gt;</p>
-<p class="p1">&lt;span class="material-symbols-outlined text-8xl text-primary/10 mb-6"&gt;ev_station&lt;/span&gt;</p>
-<p class="p1">&lt;h2 class="text-3xl font-black text-primary"&gt;Pumps Matrix&lt;/h2&gt;</p>
-<p class="p1">&lt;p class="text-slate-400 max-w-md mt-4 font-medium"&gt;Centralized pump control system under construction.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/main&gt;</p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.addEventListener('DOMContentLoaded', () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const navItems = document.querySelectorAll('.nav-item');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const sections = document.querySelectorAll('#content-container &gt; div');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const contentContainer = document.getElementById('content-container');</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>navItems.forEach(item =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>item.addEventListener('click', (e) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const targetSectionId = item.getAttribute('data-section');</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>// Update Sidebar Active State</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navItems.forEach(i =&gt; i.classList.remove('active'));</p>
-<p class="p1"><span class="Apple-converted-space">                </span>item.classList.add('active');</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>// Switch Content</p>
-<p class="p1"><span class="Apple-converted-space">                </span>sections.forEach(section =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>if (section.id === targetSectionId) {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>section.classList.remove('hidden-content');</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>// Scroll to top of section</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>contentContainer.scrollTop = 0;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>section.classList.add('hidden-content');</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>});</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Initialize with Dashboard if needed (redundant since active by default in HTML)</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const dashboardBtn = document.querySelector('[data-section="dashboard"]');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>if (dashboardBtn) dashboardBtn.click();</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;&lt;/html&gt;</p>
+<body class="bg-surface text-on-surface flex overflow-hidden h-screen">
+
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-72 bg-[#001f3d]/90 dark:bg-slate-950/90 backdrop-blur-xl flex flex-col border-r border-blue-900/10 shadow-2xl shadow-blue-900/20 z-50">
+<!-- ... senin mevcut sidebar HTML burada ... -->
+</aside>
+
+<!-- Content Shell -->
+<main class="flex-1 ml-72 flex flex-col h-full overflow-hidden">
+<!-- ... header ve dashboard vs tüm content HTML burada ... -->
+</main>
+
+<!-- Sidebar JS: Section geçişleri -->
+<script>
+  const navItems = document.querySelectorAll('.nav-item');
+  const sections = document.querySelectorAll('.hidden-content, #dashboard');
+
+  // Başlangıçta dashboard göster
+  sections.forEach(sec => {
+    if(sec.id === 'dashboard') {
+      sec.classList.remove('hidden-content');
+    } else {
+      sec.classList.add('hidden-content');
+    }
+  });
+
+  // Tıklama olayları
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const sectionId = item.dataset.section;
+
+      // Tüm sectionları gizle
+      sections.forEach(sec => sec.classList.add('hidden-content'));
+
+      // Tüm nav-itemlardan active kaldır
+      navItems.forEach(nav => nav.classList.remove('active'));
+
+      // Tıklanan item active yap
+      item.classList.add('active');
+
+      // İlgili sectionu göster
+      const targetSection = document.getElementById(sectionId);
+      if(targetSection) {
+        targetSection.classList.remove('hidden-content');
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
