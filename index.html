@@ -1,148 +1,76 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "surface-container-high": "#ddeaf2",
-              "surface-container": "#e3f0f8",
-              "error": "#ba1a1a",
-              "outline": "#737780",
-              "tertiary-fixed": "#ffdbca",
-              "on-secondary-container": "#4e6874",
-              "secondary": "#48626e",
-              "on-tertiary-fixed": "#341100",
-              "on-secondary": "#ffffff",
-              "secondary-fixed-dim": "#afcbd8",
-              "surface-dim": "#cfdce4",
-              "on-error": "#ffffff",
-              "on-background": "#111d23",
-              "secondary-container": "#cbe7f5",
-              "on-tertiary-fixed-variant": "#723610",
-              "tertiary": "#381300",
-              "on-error-container": "#93000a",
-              "surface-container-highest": "#d7e4ec",
-              "on-tertiary": "#ffffff",
-              "error-container": "#ffdad6",
-              "on-primary-container": "#6b9edf",
-              "inverse-surface": "#263238",
-              "surface-container-lowest": "#ffffff",
-              "surface-tint": "#27609d",
-              "on-secondary-fixed-variant": "#304a55",
-              "on-primary": "#ffffff",
-              "inverse-on-surface": "#e6f3fb",
-              "on-primary-fixed-variant": "#004882",
-              "surface": "#f4faff",
-              "tertiary-container": "#592300",
-              "surface-variant": "#d7e4ec",
-              "outline-variant": "#c3c6d1",
-              "primary-container": "#003461",
-              "surface-container-low": "#e9f6fd",
-              "tertiary-fixed-dim": "#ffb690",
-              "primary-fixed": "#d3e4ff",
-              "surface-bright": "#f4faff",
-              "on-primary-fixed": "#001c38",
-              "inverse-primary": "#a3c9ff",
-              "secondary-fixed": "#cbe7f5",
-              "primary": "#001f3d",
-              "on-secondary-fixed": "#021f29",
-              "primary-fixed-dim": "#a3c9ff",
-              "on-tertiary-container": "#d8885c",
-              "on-surface-variant": "#43474f",
-              "on-surface": "#111d23",
-              "background": "#f4faff"
-            },
-            fontFamily: {
-              "headline": ["Inter"],
-              "body": ["Inter"],
-              "label": ["Inter"]
-            },
-            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-          },
-        },
-      }
-</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KPS8 OSMAN BEY | PMS</title>
+<script src="https://cdn.tailwindcss.com"></script>
 <style>
-    body { font-family: 'Inter', sans-serif; }
-    .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        display: inline-block;
-        vertical-align: middle;
-    }
-    .sidebar-active-fill {
-        font-variation-settings: 'FILL' 1 !important;
-    }
-    .nav-item.active {
-        background: linear-gradient(to right, #001f3d, #003461);
-        color: white !important;
-        border-right: 4px solid #60a5fa;
-        transform: translateX(4px);
-    }
-    .nav-item.active span:first-child {
-        font-variation-settings: 'FILL' 1;
-    }
-    .hidden-content {
-        display: none;
-    }
-    .authoritative-gradient { background: linear-gradient(135deg, #001f3d 0%, #003461 100%); }
+  body { font-family: 'Inter', sans-serif; }
+  .hidden-content { display: none; }
+  .nav-item.active { background: linear-gradient(to right,#001f3d,#003461); color:white !important; border-right:4px solid #60a5fa; transform: translateX(4px);}
 </style>
 </head>
-<body class="bg-surface text-on-surface flex overflow-hidden h-screen">
-
-<!-- SideNavBar -->
-<aside class="fixed left-0 top-0 h-full w-72 bg-[#001f3d]/90 dark:bg-slate-950/90 backdrop-blur-xl flex flex-col border-r border-blue-900/10 shadow-2xl shadow-blue-900/20 z-50">
-<!-- ... senin mevcut sidebar HTML burada ... -->
+<body class="flex h-screen overflow-hidden bg-surface text-on-surface">
+<!-- Sidebar -->
+<aside class="fixed left-0 top-0 h-full w-72 bg-[#001f3d]/90 flex flex-col p-6 space-y-6">
+  <h2 class="text-white font-bold text-sm">KPS8 OSMAN BEY</h2>
+  <nav class="flex flex-col space-y-1" id="sidebar-nav">
+    <a class="nav-item active px-4 py-2 rounded cursor-pointer" data-section="dashboard">Dashboard</a>
+    <a class="nav-item px-4 py-2 rounded cursor-pointer" data-section="spark-plug">Spark Plug</a>
+    <a class="nav-item px-4 py-2 rounded cursor-pointer" data-section="pcc">PCC</a>
+    <a class="nav-item px-4 py-2 rounded cursor-pointer" data-section="valve">Valve Measurement</a>
+  </nav>
 </aside>
 
-<!-- Content Shell -->
-<main class="flex-1 ml-72 flex flex-col h-full overflow-hidden">
-<!-- ... header ve dashboard vs tüm content HTML burada ... -->
+<!-- Main Content -->
+<main class="flex-1 ml-72 overflow-y-auto p-8">
+  <!-- Dashboard -->
+  <div id="dashboard">
+    <h1 class="text-2xl font-bold text-primary mb-4">Dashboard</h1>
+    <p class="mb-2">Toplam işletim süresi: 1,324,580 saat</p>
+    <p>Planned Checks: 42</p>
+  </div>
+
+  <!-- Spark Plug -->
+  <div id="spark-plug" class="hidden-content">
+    <h1 class="text-2xl font-bold text-primary mb-4">Spark Plug Maintenance</h1>
+    <p>Engine 1: E-01, E-02, E-03</p>
+  </div>
+
+  <!-- PCC -->
+  <div id="pcc" class="hidden-content">
+    <h1 class="text-2xl font-bold text-primary mb-4">PCC (Non-Return Valve)</h1>
+    <p>Running Hours: 24,582</p>
+    <p>Active Alerts: 3</p>
+  </div>
+
+  <!-- Valve -->
+  <div id="valve" class="hidden-content">
+    <h1 class="text-2xl font-bold text-primary mb-4">Valve Measurement</h1>
+    <p>Unit U1: Inlet 0.45mm / Exhaust 0.88mm</p>
+    <p>Unit U2: Inlet 0.44mm / Exhaust 0.95mm</p>
+  </div>
 </main>
 
-<!-- Sidebar JS: Section geçişleri -->
+<!-- JS Section -->
 <script>
   const navItems = document.querySelectorAll('.nav-item');
-  const sections = document.querySelectorAll('.hidden-content, #dashboard');
+  const sections = document.querySelectorAll('#dashboard, #spark-plug, #pcc, #valve');
 
-  // Başlangıçta dashboard göster
-  sections.forEach(sec => {
-    if(sec.id === 'dashboard') {
-      sec.classList.remove('hidden-content');
-    } else {
-      sec.classList.add('hidden-content');
-    }
-  });
-
-  // Tıklama olayları
   navItems.forEach(item => {
     item.addEventListener('click', () => {
-      const sectionId = item.dataset.section;
-
-      // Tüm sectionları gizle
-      sections.forEach(sec => sec.classList.add('hidden-content'));
-
-      // Tüm nav-itemlardan active kaldır
-      navItems.forEach(nav => nav.classList.remove('active'));
-
-      // Tıklanan item active yap
+      // Remove active class from all
+      navItems.forEach(i => i.classList.remove('active'));
       item.classList.add('active');
 
-      // İlgili sectionu göster
-      const targetSection = document.getElementById(sectionId);
-      if(targetSection) {
-        targetSection.classList.remove('hidden-content');
-      }
+      const target = item.dataset.section;
+      // Hide all sections
+      sections.forEach(sec => sec.classList.add('hidden-content'));
+      // Show target
+      document.getElementById(target).classList.remove('hidden-content');
     });
   });
 </script>
-
 </body>
 </html>
